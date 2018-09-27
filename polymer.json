@@ -1,0 +1,46 @@
+{
+  "npm": true,
+  "lint": {
+    "rules": [
+      "polymer-3"
+    ]
+  },
+  "entrypoint": "src/index.html",
+  "shell": "src/main.js",
+  "moduleResolution": "node",
+  "extraDependencies": [
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ],
+  "builds": [
+    {
+      "name": "es5-bundled",
+      "js": {
+        "compile": "es5",
+        "minify": false,
+        "transformModulesToAmd": true
+      },
+      "css": {
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      },
+      "bundle": true
+    },
+    {
+      "name": "es5-bundled-minified",
+      "js": {
+        "compile": "es5",
+        "minify": true,
+        "transformModulesToAmd": true
+      },
+      "css": {
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      },
+      "bundle": true
+    }
+  ]
+}
